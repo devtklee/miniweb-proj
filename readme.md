@@ -1,5 +1,5 @@
 Mini Web project using Vanilla JS
 
-<a ref="https://www.udemy.com/share/102yzoA0QSdl5TTXo=/"> Online Course Link </a>
+- [Online Course Link](https://www.udemy.com/share/102yzoA0QSdl5TTXo=/)
 
-1. Form Validator
+1. Form Validator (Completion Date: Nov 22, 2020)
