@@ -4,3 +4,4 @@ Mini Web project using Vanilla JS
 
 1. Form Validator (Completion Date: Nov 22, 2020)
 2. Movie Seat Booking (Completion Date : Nov 29, 2020)
+3. Custom Video Player (Completion Date : Nov 29, 2020)
