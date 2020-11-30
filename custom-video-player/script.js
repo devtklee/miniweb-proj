@@ -28,33 +28,36 @@ function updatePlayIcon(){
 //update progress & timestamp
 function updateProgress(){
    progress.value = (video.currentTime/video.duration) * 100;
-
+   getCurrentPlaytime();
 }
 
 //Set video time to progress
 function setVideoProgress(){
    video.currentTime = (+progress.value * video.duration) / 100;
 
-   //Get Minutes & Second
+   getCurrentPlaytime();
+
+}
+
+function getCurrentPlaytime(){
+      //Get Minutes & Second
    
-   let hour = Math.floor(video.currentTime / 360)
-   if(hour <10){
-      hour='0' + String(hour);
-   }
-
-   let mins = Math.floor((video.currentTime - (hour*360))/ 60);
-   if(mins < 10){
-      mins = '0' + String(mins);
-   }
-
-   let secs = Math.floor((video.currentTime - (hour*360)) % 60);
-   if(secs <10){
-      secs='0' + String(secs);
-   }
-
-   console.log(video.currentTime);
-   timestamp.innerHTML=`${hour}:${mins}:${secs}`;
+      let hour = Math.floor(video.currentTime / 360)
+      if(hour <10){
+         hour='0' + String(hour);
+      }
    
+      let mins = Math.floor((video.currentTime - (hour*360))/ 60);
+      if(mins < 10){
+         mins = '0' + String(mins);
+      }
+   
+      let secs = Math.floor((video.currentTime - (hour*360)) % 60);
+      if(secs <10){
+         secs='0' + String(secs);
+      }
+   
+      timestamp.innerHTML=`${hour}:${mins}:${secs}`
 }
 
 //Stop Video
@@ -68,6 +71,7 @@ video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('pause', updatePlayIcon);
 video.addEventListener('play', updatePlayIcon);
 video.addEventListener('timeupdate', updateProgress);
+
 
 play.addEventListener('click', toggleVideoStatus);
 pause.addEventListener('click', stopVideo);
